@@ -32,23 +32,49 @@
             padding: 2em;
             background: #f4f4f4;
         }
-        .posts {
+        .content {
             display: flex;
+            flex-wrap: wrap;
             gap: 1em;
             padding: 2em;
-            flex-wrap: wrap;
         }
-        .post {
+        .main-content, .sidebar {
+            flex: 1;
+            min-width: 300px;
+        }
+        .post, .trending, .category, .ad {
             border: 1px solid #ddd;
             padding: 1em;
-            width: 100%;
-            max-width: 300px;
+            margin-bottom: 1em;
         }
         footer {
             text-align: center;
             background-color: #222;
             color: #fff;
             padding: 1em 0;
+        }
+        .social {
+            display: flex;
+            justify-content: center;
+            gap: 1em;
+            margin-top: 1em;
+        }
+        .social a {
+            text-decoration: none;
+            color: #333;
+            font-size: 1.5em;
+        }
+        .comment-box {
+            border: 1px solid #ddd;
+            padding: 1em;
+            margin-top: 1em;
+        }
+        .comment-box input, .comment-box textarea {
+            width: 100%;
+            padding: 0.5em;
+            margin-bottom: 1em;
+            border: 1px solid #ddd;
+            border-radius: 5px;
         }
     </style>
 </head>
@@ -69,26 +95,57 @@
             <h1>Welcome to Saara Info</h1>
             <p>Your guide to PC hardware and gaming builds.</p>
         </section>
-        <section class="posts">
-            <div class="post">
-                <h2>Latest PC Build</h2>
-                <p>Explore our step-by-step guide to building a gaming PC.</p>
-                <a href="#">Read More</a>
+        <div class="content">
+            <div class="main-content">
+                <div class="post">
+                    <h2>Latest PC Build</h2>
+                    <p>Explore our step-by-step guide to building a gaming PC.</p>
+                    <a href="#">Read More</a>
+                </div>
+                <div class="post">
+                    <h2>Budget GPUs in 2024</h2>
+                    <p>Find the best budget GPUs for your gaming needs.</p>
+                    <a href="#">Read More</a>
+                </div>
+                <div class="comment-box">
+                    <h3>Leave a Comment</h3>
+                    <input type="text" placeholder="Your Name">
+                    <textarea rows="4" placeholder="Your Comment"></textarea>
+                    <button>Submit</button>
+                </div>
             </div>
-            <div class="post">
-                <h2>Budget GPUs in 2024</h2>
-                <p>Find the best budget GPUs for your gaming needs.</p>
-                <a href="#">Read More</a>
+            <div class="sidebar">
+                <div class="trending">
+                    <h3>Trending Blogs</h3>
+                    <ul>
+                        <li><a href="#">Best Gaming Monitors</a></li>
+                        <li><a href="#">Top AMD CPUs in 2024</a></li>
+                        <li><a href="#">NVIDIA's Latest GPUs</a></li>
+                    </ul>
+                </div>
+                <div class="category">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="#">Gaming PCs</a></li>
+                        <li><a href="#">AMD Builds</a></li>
+                        <li><a href="#">NVIDIA Builds</a></li>
+                        <li><a href="#">Budget PCs</a></li>
+                    </ul>
+                </div>
+                <div class="ad">
+                    <h3>Advertisement</h3>
+                    <p>Place your ad here.</p>
+                </div>
             </div>
-            <div class="post">
-                <h2>Top AMD CPUs</h2>
-                <p>Compare the latest AMD CPUs for gaming and productivity.</p>
-                <a href="#">Read More</a>
-            </div>
-        </section>
+        </div>
     </main>
     <footer>
         <p>&copy; 2024 Saara Info. All rights reserved.</p>
+        <div class="social">
+            <a href="#">&#x1F4F7;</a> <!-- Example of social icons -->
+            <a href="#">&#x1F426;</a>
+            <a href="#">&#x1F4F1;</a>
+        </div>
     </footer>
 </body>
 </html>
